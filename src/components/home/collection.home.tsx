@@ -4,11 +4,22 @@ import { APP_COLOR } from "@/utils/constants";
 import { useEffect, useState } from "react";
 import { router } from "expo-router";
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import AntDesign from '@expo/vector-icons/AntDesign';
+import Entypo from '@expo/vector-icons/Entypo';
 
 interface IProps {
     name: string;
     description?: string;
-    data?: []
+    data?: {
+        key: number,
+        title: string,
+        description: string,
+        source: any,
+        time: string,
+        views: number,
+        share: number
+    }[]
+
 }
 
 const CollectionHome = (props: IProps) => {
@@ -27,7 +38,7 @@ const CollectionHome = (props: IProps) => {
             <View style={{ height: 10, backgroundColor: APP_COLOR.GREY }}></View>
             <View style={styles.container}>
                 <View style={styles.titleContainer}>
-                    <Text style={{ fontSize: 16, fontWeight: '500', color: APP_COLOR.ORANGE }}>{name}</Text>
+                    <Text style={{ fontSize: 18, fontWeight: '500', color: APP_COLOR.ORANGE }}>{name}</Text>
                     <Pressable
                         style={{ flexDirection: 'row', alignItems: 'center' }}
                     >
@@ -49,28 +60,65 @@ const CollectionHome = (props: IProps) => {
                         <Pressable
                         >
                             <View style={styles.itemContainer}>
-                                {/* <Image source={} style={{ height: 130, width: 130 }} /> */}
-                                <Text
-                                    numberOfLines={1}
-                                    ellipsizeMode="tail"
-                                    style={{
-                                        fontSize: 15,
-                                        fontWeight: '500',
-                                        marginHorizontal: 5,
-                                        maxWidth: 130
-                                    }}>abn</Text>
-                                {/* <Text
-                                    style={{
-                                        borderWidth: 1,
-                                        borderColor: APP_COLOR.ORANGE,
-                                        alignSelf: 'flex-start',
-                                        paddingHorizontal: 5,
-                                        marginHorizontal: 5,
-                                        borderRadius: 3,
-                                        marginVertical: 5,
-                                        color: APP_COLOR.ORANGE,
-                                    }}
-                                >Flash Sale</Text> */}
+                                <View style={{ gap: 10, marginHorizontal: 15, marginVertical: 10 }}>
+                                    <Text
+                                        numberOfLines={2}
+                                        ellipsizeMode="tail"
+                                        style={{
+                                            fontSize: 16,
+                                            fontWeight: '500',
+                                            maxWidth: 220
+                                        }}
+                                    >
+                                        {item.title}
+                                    </Text>
+                                    <Text
+                                        numberOfLines={3}
+                                        ellipsizeMode="tail"
+                                        style={{
+                                            fontSize: 16,
+                                            maxWidth: 220,
+                                        }}
+                                    >
+                                        {item.description}
+                                    </Text>
+                                    <View style={{ flexDirection: 'row', gap: 10 }}>
+                                        <View style={{ flexDirection: 'row', gap: 2 }}>
+                                            <MaterialIcons name="access-time-filled" size={20} color="black" />
+                                            <Text>
+                                                {item.time}
+                                            </Text>
+                                        </View>
+                                        <View style={{ flexDirection: 'row', gap: 2 }}>
+                                            <AntDesign name="eye" size={20} color="black" />
+                                            <Text>
+                                                {item.views}
+                                            </Text>
+                                        </View>
+
+                                        <View style={{ flexDirection: 'row', gap: 2 }}>
+                                            <Entypo name="share" size={20} color="black" />
+                                            <Text>
+                                                {item.share}
+                                            </Text>
+                                        </View>
+
+
+                                    </View>
+                                </View>
+                                <View>
+                                    <Image
+                                        source={item.source}
+                                        style={{
+                                            height: 140,
+                                            width: 100,
+                                            marginVertical: 10,
+                                            marginHorizontal: 20,
+                                            borderRadius: 20
+                                        }}
+                                    />
+
+                                </View>
                             </View>
                         </Pressable>
                     )}
@@ -96,8 +144,11 @@ const styles = StyleSheet.create({
         color: '#5a5a5a'
     },
     itemContainer: {
-        backgroundColor: APP_COLOR.GREY,
-        width: 130
+        backgroundColor: APP_COLOR.WHITE,
+        flexDirection: "row",
+        flexWrap: 'wrap',
+        borderRadius: 20,
+        marginVertical: 10
     }
 })
 

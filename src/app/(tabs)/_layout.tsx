@@ -20,8 +20,9 @@ const TabLayout = () => {
                 options={{
                     title: 'Trang chủ',
                     tabBarIcon: ({ color }) => <FontAwesome name="home" size={26} color={color} />,
-                    headerShown: false,
+                    headerShown: false
                 }}
+
             />
 
             <Tabs.Screen
