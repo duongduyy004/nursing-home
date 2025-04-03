@@ -5,12 +5,12 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 const TopListHome = () => {
 
     const icons = [
-        { key: 1, name: "Lịch hẹn", source: require("@/assets/icons/appointment-reminders.png") },
+        { key: 1, name: "Thông báo", source: require("@/assets/icons/appointment-reminders.png") },
         { key: 2, name: "Lịch sinh hoạt", source: require("@/assets/icons/calendar.png") },
-        { key: 3, name: "Liên hệ", source: require("@/assets/icons/call.png") },
-        { key: 4, name: "Bác sĩ", source: require("@/assets/icons/doctor.png") },
+        { key: 3, name: "Liên hệ người thân", source: require("@/assets/icons/call.png") },
+        { key: 4, name: "Liên hệ nhân viên", source: require("@/assets/icons/doctor.png") },
         { key: 5, name: "Tình trạng sức khỏe", source: require("@/assets/icons/health.png") },
-        { key: 5, name: "Đơn thuốc", source: require("@/assets/icons/prescription.png") },
+        { key: 5, name: "Đơn thuốc của tôi", source: require("@/assets/icons/prescription.png") },
     ]
 
     return (
@@ -56,12 +56,14 @@ const TopListHome = () => {
                             >
                                 <Image
                                     source={item.source}
-                                    resizeMode="center"
+                                    resizeMode="contain"
                                     style={{
                                         width: 55,
                                         height: 55,
                                         backgroundColor: APP_COLOR.ICON_COLOR,
                                         borderRadius: 10,
+                                        aspectRatio: 1.2,
+
                                     }}
                                 />
                                 <Text style={{ textAlign: "center" }}>{item.name}</Text>

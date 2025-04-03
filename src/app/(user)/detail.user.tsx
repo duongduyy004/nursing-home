@@ -53,14 +53,14 @@ const DeltailUser = () => {
                     </View>
                 </View>
                 <View style={styles.item}>
-                    <Text style={styles.textStyle}>Số điện thoại </Text>
+                    <Text style={styles.textStyle}>Email </Text>
                     <View style={{ flexDirection: 'row', justifyContent: 'center', gap: 10 }}>
-                        <Text style={styles.textStyle}>0123456789</Text>
+                        <Text style={styles.textStyle}></Text>
                         <AntDesign name="right" size={24} color="black" />
                     </View>
                 </View>
                 <View style={styles.item}>
-                    <Text style={styles.textStyle}>Email </Text>
+                    <Text style={styles.textStyle}>Người giám hộ </Text>
                     <View style={{ flexDirection: 'row', justifyContent: 'center', gap: 10 }}>
                         <Text style={styles.textStyle}></Text>
                         <AntDesign name="right" size={24} color="black" />

@@ -39,12 +39,12 @@ const CollectionHome = (props: IProps) => {
             <View style={styles.container}>
                 <View style={styles.titleContainer}>
                     <Text style={{ fontSize: 18, fontWeight: '500', color: APP_COLOR.ORANGE }}>{name}</Text>
-                    <Pressable
+                    {/* <Pressable
                         style={{ flexDirection: 'row', alignItems: 'center' }}
                     >
                         <Text style={{ color: '#5a5a5a' }}>{`Xem tất cả`}</Text>
                         <MaterialIcons name="keyboard-arrow-right" size={24} color='grey' />
-                    </Pressable>
+                    </Pressable> */}
                 </View>
                 <View style={styles.description}>
                     <Text>{description}</Text>
