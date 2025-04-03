@@ -44,18 +44,9 @@ const TabLayout = () => {
             />
 
             <Tabs.Screen
-                name="service"
-                options={{
-                    title: 'Dịch vụ',
-                    tabBarIcon: ({ color }) => <MaterialIcons name="miscellaneous-services" size={26} color={color} />,
-                    headerShown: false,
-                }}
-            />
-
-            <Tabs.Screen
                 name="account"
                 options={{
-                    title: 'Tôi',
+                    title: 'Cá nhân',
                     tabBarIcon: ({ color }) => <FontAwesome name="user" size={26} color={color} />,
                     headerShown: false,
                 }}

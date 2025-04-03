@@ -1,5 +1,5 @@
 import { APP_COLOR } from "@/utils/constants";
-import { SetStateAction, useState } from "react";
+import { JSXElementConstructor, ReactElement, ReactNode, ReactPortal, SetStateAction, useState } from "react";
 import { StyleSheet, Text, View } from "react-native"
 import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -146,7 +146,7 @@ const ScheduleTab = () => {
                 // the value of date key has to be an empty array []. If there exists no value for date key it is
                 // considered that the date in question is not yet loaded
                 items={agendaItems}
-                onDayPress={day => {
+                onDayPress={(day: { dateString: SetStateAction<string>; }) => {
                     setSelected(day.dateString)
                 }}
                 markedDates={{
@@ -156,7 +156,7 @@ const ScheduleTab = () => {
                     }
                 }}
 
-                renderItem={(item) => {
+                renderItem={(item: { time: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; name: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; }) => {
                     return (
                         <View style={styles.scheduleItem}>
                             <Text style={{

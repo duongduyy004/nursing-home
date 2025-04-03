@@ -28,7 +28,7 @@ export default function RootLayout() {
                             <Stack
                                 screenOptions={{
                                     headerStyle: { backgroundColor: APP_COLOR.WHITE },
-                                    headerTintColor: APP_COLOR.ORANGE,
+                                    headerTintColor: APP_COLOR.GREEN,
                                     headerTitleStyle: {
                                         fontWeight: 'bold',
                                         color: 'black'
@@ -77,6 +77,13 @@ export default function RootLayout() {
                                 <Stack.Screen
                                     name="(tabs)"
                                     options={{ headerShown: false }}
+                                />
+
+                                <Stack.Screen
+                                    name="(user)/detail.user"
+                                    options={{
+                                        headerTitle: 'Thông tin cá nhân'
+                                    }}
                                 />
                             </Stack>
                         </ThemeProvider>
