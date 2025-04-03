@@ -12,7 +12,7 @@ const RootPage = () => {
 
     if (true) {
         return (
-            <Redirect href={'/(tabs)'} />
+            <Redirect href={'/(auth)/welcome'} />
         )
     }
 

@@ -14,8 +14,6 @@ const WelcomePage = () => {
     // }
 
     return (
-
-
         <ImageBackground
             style={{ flex: 1 }}
             source={bg}
@@ -29,7 +27,7 @@ const WelcomePage = () => {
                     <View style={styles.welcomeText}>
                         <Text style={styles.heading}>Welcome to</Text>
                         <Text style={styles.body}>E-Nursing</Text>
-                        <Text style={styles.footer}>Somethingggggggggggggggggggggggggg</Text>
+                        <Text style={styles.footer}>Ứng dụng di động dành cho người cao tuổi</Text>
                     </View>
 
                     <View style={styles.welcomeButton}>
@@ -71,7 +69,7 @@ const WelcomePage = () => {
                                 textDecorationLine: 'underline',
                                 fontSize: 16
                             }}>
-                                <Link href={"/signup"}>Liên hệ</Link>
+                                <Link href={'/(auth)/login'}>Liên hệ</Link>
                             </Text>
                         </View>
 
@@ -86,7 +84,7 @@ const WelcomePage = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingHorizontal: 10
+        paddingHorizontal: 10,
     },
     welcomeText: {
         flex: 0.7,
@@ -103,7 +101,8 @@ const styles = StyleSheet.create({
     },
     heading: {
         fontSize: 50,
-        fontWeight: "700"
+        fontWeight: "700",
+        color: 'rgb(126, 120, 119)'
     },
     body: {
         fontSize: 35,
@@ -113,7 +112,7 @@ const styles = StyleSheet.create({
     },
     footer: {
         fontSize: 18,
-        color: 'rgb(178, 207, 195)',
+        color: 'rgb(101, 255, 191)',
         fontWeight: '400',
         lineHeight: 30
     },

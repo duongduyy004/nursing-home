@@ -3,7 +3,7 @@ export const APP_COLOR = {
     WHITE: '#fff',
     BTN_BORDER: '#505050',
     GREY: '#ccc',
-    BLUE: 'rgb(88, 8, 104)',
+    BLUE: 'rgb(118, 123, 194)',
     PRIMARY: 'blue',
     GREEN: 'rgb(35, 95, 7)',
     NOTIFICATION_COLOR: 'rgb(190, 219, 205)',
