@@ -27,7 +27,7 @@ const WelcomePage = () => {
                     <View style={styles.welcomeText}>
                         <Text style={styles.heading}>Welcome to</Text>
                         <Text style={styles.body}>E-Nursing</Text>
-                        <Text style={styles.footer}>Ứng dụng di động dành cho người cao tuổi</Text>
+                        <Text style={styles.footer}>Ứng dụng hỗ trợ trung tâm dưỡng lão và người cao tuổi</Text>
                     </View>
 
                     <View style={styles.welcomeButton}>
